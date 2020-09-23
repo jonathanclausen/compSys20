@@ -1,0 +1,56 @@
+### Starting build.
+# Target: prerf.ml.depends, tags: { extension:ml, file:prerf.ml, ocaml, ocamldep, quiet }
+/home/neumann/.opam/4.07.0/bin/ocamldep.opt -modules prerf.ml > prerf.ml.depends # cached
+# Target: cache.ml.depends, tags: { extension:ml, file:cache.ml, ocaml, ocamldep, quiet }
+/home/neumann/.opam/4.07.0/bin/ocamldep.opt -modules cache.ml > cache.ml.depends # cached
+# Target: cache.cmo, tags: { byte, compile, extension:cmo, extension:ml, file:cache.cmo, file:cache.ml, implem, ocaml, quiet }
+/home/neumann/.opam/4.07.0/bin/ocamlc.opt -c -o cache.cmo cache.ml # cached
+# Target: machine.mli.depends, tags: { extension:mli, file:machine.mli, ocaml, ocamldep, quiet }
+/home/neumann/.opam/4.07.0/bin/ocamldep.opt -modules machine.mli > machine.mli.depends # cached
+# Target: predictors.ml.depends, tags: { extension:ml, file:predictors.ml, ocaml, ocamldep, quiet }
+/home/neumann/.opam/4.07.0/bin/ocamldep.opt -modules predictors.ml > predictors.ml.depends # cached
+# Target: predictors.cmo, tags: { byte, compile, extension:cmo, extension:ml, file:predictors.cmo, file:predictors.ml, implem, ocaml, quiet }
+/home/neumann/.opam/4.07.0/bin/ocamlc.opt -c -o predictors.cmo predictors.ml # cached
+# Target: resource.ml.depends, tags: { extension:ml, file:resource.ml, ocaml, ocamldep, quiet }
+/home/neumann/.opam/4.07.0/bin/ocamldep.opt -modules resource.ml > resource.ml.depends # cached
+# Target: resource.cmo, tags: { byte, compile, extension:cmo, extension:ml, file:resource.cmo, file:resource.ml, implem, ocaml, quiet }
+/home/neumann/.opam/4.07.0/bin/ocamlc.opt -c -o resource.cmo resource.ml # cached
+# Target: machine.cmi, tags: { byte, compile, extension:mli, file:machine.mli, interf, ocaml, quiet }
+/home/neumann/.opam/4.07.0/bin/ocamlc.opt -c -o machine.cmi machine.mli # cached
+# Target: prerf.cmo, tags: { byte, compile, extension:cmo, extension:ml, file:prerf.cmo, file:prerf.ml, implem, ocaml, quiet }
+/home/neumann/.opam/4.07.0/bin/ocamlc.opt -c -o prerf.cmo prerf.ml # cached
+# Target: cache.cmx, tags: { compile, extension:cmx, extension:ml, file:cache.cmx, file:cache.ml, implem, native, ocaml, quiet }
+/home/neumann/.opam/4.07.0/bin/ocamlopt.opt -c -o cache.cmx cache.ml # cached
+# Target: machine.ml.depends, tags: { extension:ml, file:machine.ml, ocaml, ocamldep, quiet }
+/home/neumann/.opam/4.07.0/bin/ocamldep.opt -modules machine.ml > machine.ml.depends # cached
+# Target: ast.ml.depends, tags: { extension:ml, file:ast.ml, ocaml, ocamldep, quiet }
+/home/neumann/.opam/4.07.0/bin/ocamldep.opt -modules ast.ml > ast.ml.depends # cached
+# Target: ast.cmo, tags: { byte, compile, extension:cmo, extension:ml, file:ast.cmo, file:ast.ml, implem, ocaml, quiet }
+/home/neumann/.opam/4.07.0/bin/ocamlc.opt -c -o ast.cmo ast.ml # cached
+# Target: ast.cmx, tags: { compile, extension:cmx, extension:ml, file:ast.cmx, file:ast.ml, implem, native, ocaml, quiet }
+/home/neumann/.opam/4.07.0/bin/ocamlopt.opt -c -o ast.cmx ast.ml # cached
+# Target: memory.ml.depends, tags: { extension:ml, file:memory.ml, ocaml, ocamldep, quiet }
+/home/neumann/.opam/4.07.0/bin/ocamldep.opt -modules memory.ml > memory.ml.depends # cached
+# Target: memory.mli.depends, tags: { extension:mli, file:memory.mli, ocaml, ocamldep, quiet }
+/home/neumann/.opam/4.07.0/bin/ocamldep.opt -modules memory.mli > memory.mli.depends # cached
+# Target: memory.cmi, tags: { byte, compile, extension:mli, file:memory.mli, interf, ocaml, quiet }
+/home/neumann/.opam/4.07.0/bin/ocamlc.opt -c -o memory.cmi memory.mli # cached
+# Target: memory.cmx, tags: { compile, extension:cmx, extension:ml, file:memory.cmx, file:memory.ml, implem, native, ocaml, quiet }
+/home/neumann/.opam/4.07.0/bin/ocamlopt.opt -c -o memory.cmx memory.ml # cached
+# Target: predictors.cmx, tags: { compile, extension:cmx, extension:ml, file:predictors.cmx, file:predictors.ml, implem, native, ocaml, quiet }
+/home/neumann/.opam/4.07.0/bin/ocamlopt.opt -c -o predictors.cmx predictors.ml # cached
+# Target: printer.ml.depends, tags: { extension:ml, file:printer.ml, ocaml, ocamldep, quiet }
+/home/neumann/.opam/4.07.0/bin/ocamldep.opt -modules printer.ml > printer.ml.depends # cached
+# Target: printer.cmo, tags: { byte, compile, extension:cmo, extension:ml, file:printer.cmo, file:printer.ml, implem, ocaml, quiet }
+/home/neumann/.opam/4.07.0/bin/ocamlc.opt -c -o printer.cmo printer.ml # cached
+# Target: printer.cmx, tags: { compile, extension:cmx, extension:ml, file:printer.cmx, file:printer.ml, implem, native, ocaml, quiet }
+/home/neumann/.opam/4.07.0/bin/ocamlopt.opt -c -o printer.cmx printer.ml # cached
+# Target: resource.cmx, tags: { compile, extension:cmx, extension:ml, file:resource.cmx, file:resource.ml, implem, native, ocaml, quiet }
+/home/neumann/.opam/4.07.0/bin/ocamlopt.opt -c -o resource.cmx resource.ml # cached
+# Target: machine.cmx, tags: { compile, extension:cmx, extension:ml, file:machine.cmx, file:machine.ml, implem, native, ocaml, quiet }
+/home/neumann/.opam/4.07.0/bin/ocamlopt.opt -c -o machine.cmx machine.ml # cached
+# Target: prerf.cmx, tags: { compile, extension:cmx, extension:ml, file:prerf.cmx, file:prerf.ml, implem, native, ocaml, quiet }
+/home/neumann/.opam/4.07.0/bin/ocamlopt.opt -c -o prerf.cmx prerf.ml # cached
+# Target: prerf.native, tags: { dont_link_with, extension:native, file:prerf.native, link, native, ocaml, program, quiet }
+/home/neumann/.opam/4.07.0/bin/ocamlopt.opt ast.cmx cache.cmx memory.cmx predictors.cmx printer.cmx resource.cmx machine.cmx prerf.cmx -o prerf.native # cached
+# Compilation successful.
