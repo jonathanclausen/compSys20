@@ -247,13 +247,13 @@ int main(int argc, char* argv[]) {
             printf("%16lx -> reg[%lx]", compute_result.val, compute.reg_d.out.val); 
         else printf("                          ");
         print_ctrl(pipe_ctrl.load_store_runs, load_store.is_valid.out);
-        if (load_store.is_load.out) {
+        if (load_store.is_load.out && load_store.is_valid.out) {
             printf(" load (%lx) -> ", load_store.addr.out.val);
             if (events.data_access_ok)
                 printf("%lx -> reg[%lx]", mem_out.val, load_store.reg_d.out.val);
             else printf("miss/busy");
         }
-        else if (load_store.is_store.out) {
+        else if (load_store.is_store.out && load_store.is_valid.out) {
             printf(" store %lx -> (%lx)", load_store.value.out.val, load_store.addr.out.val);
             if (!events.data_access_ok) printf("  miss/busy");
         }
@@ -263,7 +263,8 @@ int main(int argc, char* argv[]) {
         reg_write(regs, compute.reg_d.out, compute_result, dp_ctrl.reg_wr_enable 
                   && compute.is_valid.out && pipe_ctrl.compute_runs);
         // write back load result to destination register
-        reg_write(regs, load_store.reg_d.out, mem_out, load_store.is_load.out && pipe_ctrl.load_store_runs);
+        reg_write(regs, load_store.reg_d.out, mem_out, load_store.is_load.out 
+                  && load_store.is_valid.out && pipe_ctrl.load_store_runs);
         memory_clk(mem);
 
         fetch_clk(&fetch);
