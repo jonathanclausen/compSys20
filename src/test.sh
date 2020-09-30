@@ -15,7 +15,7 @@ make
 PRUN=prun
 
 # The command with which you run PRASM: You should likely change this variable
-PRASM=prasm
+PRASM=../../bin/prasm
 
 TESTLOC=tests
 TESTDIR=test_runs

@@ -1,3 +1,3 @@
-int add(int x, int y){
+long main(long x, long y){
     return x + y;
 }
