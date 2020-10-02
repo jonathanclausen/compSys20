@@ -1,10 +1,7 @@
 test:
-  movq $10, %rdx
   movq $1, %rdi
-L2:
-  cble %rdi,%rdx,L1
-  ret %rdi
-L1:
-  addq $1, %rdi
-  jmp L2
+  movq $10, %rdx
+  addq %rdx, %rdx
+  
+
   

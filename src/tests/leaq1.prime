@@ -1,0 +1,3 @@
+test:
+  movq $10, %rdx
+  leaq (%rdx), %rdi

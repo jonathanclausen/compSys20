@@ -1,0 +1,8 @@
+test:
+  movq $1, %rdi
+  jmp L1
+  addq $2, %rdi
+L1:
+  stop
+
+  

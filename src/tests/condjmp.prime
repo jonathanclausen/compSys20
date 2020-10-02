@@ -1,0 +1,11 @@
+test:
+  movq $1, %rdi
+  movq $10, %rdx
+L2:
+  cble %rdi,%rdx,L1
+  stop
+L1:
+  addq $1, %rdi
+  jmp L2
+
+  

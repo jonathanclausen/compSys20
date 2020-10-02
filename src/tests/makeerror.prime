@@ -1,5 +1,4 @@
 test:
     movq $256, %rdx
     addq %rdx, %rdx
-    ret %rdx
     stop

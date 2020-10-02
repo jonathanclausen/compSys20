@@ -60,14 +60,23 @@ pipeline_control control_pipeline(fetch_regs* fetch, compute_regs* compute, load
 
     pipeline_control result;
     // Decide which pipeline registers to update (accept new instruction at clk boundary)
-    result.load_store_runs = true;
-    result.compute_runs = true;
-    result.fetch_runs = true;
 
+
+    result.load_store_runs = events->data_access_ok;
+    result.compute_runs = result.load_store_runs && !(load_store->is_store.out
+                                                 && (same(load_store->reg_d.out, compute->reg_d.out)
+                                                 ||  same(load_store->reg_d.out, compute->reg_s.out)
+                                                 ||  same(load_store->reg_d.out, compute->reg_z.out)));
+    result.fetch_runs = result.compute_runs && events->insn_access_ok;
+
+    
     // Decide which instructions to keep/potentially pass on/drop
-    result.fetch_valid = true;
-    compute->is_valid.in = result.fetch_valid;
-    load_store->is_valid.in = compute->is_valid.out;
+
+    bool jmp = events->insn_flow_change_request;
+    
+    result.fetch_valid = result.fetch_runs && !jmp;
+    compute->is_valid.in = result.compute_runs && !jmp;
+    load_store->is_valid.in = compute->is_valid.in;
 
     // The "xxx_runs" signals then control update of pipeline registers:
     // (actual update happens when main() calls the "xxx_clk" functions at the end of the main loop)

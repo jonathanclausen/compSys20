@@ -1,0 +1,10 @@
+test:
+  movq $1, %rdi
+  movq $2, %rdx
+  movq %rdx, %rdi
+  
+
+
+  
+
+  

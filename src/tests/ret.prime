@@ -1,0 +1,5 @@
+test:
+  movq $9, %rdx
+  movq $1, %rdi
+  ret %rdx
+  stop
