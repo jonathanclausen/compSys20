@@ -72,11 +72,11 @@ pipeline_control control_pipeline(fetch_regs* fetch, compute_regs* compute, load
     
     // Decide which instructions to keep/potentially pass on/drop
 
-    bool jmp = events->insn_flow_change_request;
+    bool jmp = events->insn_flow_change_request && result.compute_runs && compute->is_valid.out;
     
     result.fetch_valid = result.fetch_runs && !jmp;
-    compute->is_valid.in = result.compute_runs && !jmp;
-    load_store->is_valid.in = compute->is_valid.in;
+    compute->is_valid.in = result.fetch_valid;
+    load_store->is_valid.in = compute->is_valid.out && result.compute_runs;
 
     // The "xxx_runs" signals then control update of pipeline registers:
     // (actual update happens when main() calls the "xxx_clk" functions at the end of the main loop)

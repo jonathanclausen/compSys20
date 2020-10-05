@@ -1,0 +1,9 @@
+     1   : R-V      0 -> 517008000000               : R--                                                       : R-- 
+     2   : R-V      6 -> 39b7                       : R-V  51  SUB  $i,d           fffffffffffffff8 -> reg[7]   : R-- 
+     3   : R-V      8 -> 31b7                       : R-V  39  MOVQ d->(s)                                      : R-V 
+     4   : ---      a -> 507008000000               : --V                                                       : R-V  store 0 -> (fffffffffffffff8)
+     5   : R-V      a -> 507008000000               : R-V  31  MOVQ (s)->d                                      : R-- 
+     6   : R-V     10 -> 500000000000               : R-V  50  ADD  $i,d                          0 -> reg[7]   : R-V  load (fffffffffffffff8) -> 0 -> reg[b]
+     7   : R-V     16 -> 0000                       : R-V  50  ADD  $i,d                          0 -> reg[0]   : R-V 
+     8   : R-V     18 -> 0000                       : R-V  00  STOP                                             : R-V 
+Done

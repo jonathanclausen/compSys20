@@ -1,0 +1,34 @@
+     1   : R-V      0 -> 517008000000               : R--                                                       : R-- 
+     2   : R-V      6 -> 39b7                       : R-V  51  SUB  $i,d           fffffffffffffff8 -> reg[7]   : R-- 
+     3   : R-V      8 -> 646002000000               : R-V  39  MOVQ d->(s)                                      : R-V 
+     4   : R-V      e -> 4eb02c000000               : R-V  64  MOVQ $i,d                          2 -> reg[6]   : R-V  store 0 -> (fffffffffffffff8)
+     5   : R--     14 -> 506001000000               : R-V  4e  CALL  s,d,p                       14 -> reg[b]   : R-V 
+     6   : R-V     2c -> 517008000000               : R--                                                       : R-V 
+     7   : R-V     32 -> 39b7                       : R-V  51  SUB  $i,d           fffffffffffffff0 -> reg[7]   : R-- 
+     8   : R-V     34 -> 506001000000               : R-V  39  MOVQ d->(s)                                      : R-V 
+     9   : R-V     3a -> f160050000002c000000       : R-V  50  ADD  $i,d                          3 -> reg[6]   : R-V  store 14 -> (fffffffffffffff0)
+    10   : R--     44 -> 4eb024000000               : R-V  f1  CBNE $i,d,p                                      : R-V 
+    11   : R-V     2c -> 517008000000               : R--                                                       : R-V 
+    12   : R-V     32 -> 39b7                       : R-V  51  SUB  $i,d           ffffffffffffffe8 -> reg[7]   : R-- 
+    13   : R-V     34 -> 506001000000               : R-V  39  MOVQ d->(s)                                      : R-V 
+    14   : R-V     3a -> f160050000002c000000       : R-V  50  ADD  $i,d                          4 -> reg[6]   : R-V  store 14 -> (ffffffffffffffe8)
+    15   : R--     44 -> 4eb024000000               : R-V  f1  CBNE $i,d,p                                      : R-V 
+    16   : R-V     2c -> 517008000000               : R--                                                       : R-V 
+    17   : R-V     32 -> 39b7                       : R-V  51  SUB  $i,d           ffffffffffffffe0 -> reg[7]   : R-- 
+    18   : R-V     34 -> 506001000000               : R-V  39  MOVQ d->(s)                                      : R-V 
+    19   : R-V     3a -> f160050000002c000000       : R-V  50  ADD  $i,d                          5 -> reg[6]   : R-V  store 14 -> (ffffffffffffffe0)
+    20   : R-V     44 -> 4eb024000000               : R-V  f1  CBNE $i,d,p                                      : R-V 
+    21   : R--     4a -> 31b7                       : R-V  4e  CALL  s,d,p                       4a -> reg[b]   : R-V 
+    22   : R-V     24 -> 506003000000               : R--                                                       : R-V 
+    23   : R-V     2a -> 010b                       : R-V  50  ADD  $i,d                          8 -> reg[6]   : R-- 
+    24   : R--     2c -> 517008000000               : R-V  01  RET s                                            : R-V 
+    25   : R-V     4a -> 31b7                       : R--                                                       : R-V 
+    26   : R-V     4c -> 507010000000               : R-V  31  MOVQ (s)->d                                      : R-- 
+    27   : R-V     52 -> 010b                       : R-V  50  ADD  $i,d           fffffffffffffff0 -> reg[7]   : R-V  load (ffffffffffffffe0) -> 14 -> reg[b]
+    28   : R--     54 -> 0000                       : R-V  01  RET s                                            : R-V 
+    29   : R-V     14 -> 506001000000               : R--                                                       : R-V 
+    30   : R-V     1a -> 31b7                       : R-V  50  ADD  $i,d                          9 -> reg[6]   : R-- 
+    31   : R-V     1c -> 507008000000               : R-V  31  MOVQ (s)->d                                      : R-V 
+    32   : R-V     22 -> 0000                       : R-V  50  ADD  $i,d           fffffffffffffff8 -> reg[7]   : R-V  load (fffffffffffffff0) -> 14 -> reg[b]
+    33   : R-V     24 -> 506003000000               : R-V  00  STOP                                             : R-V 
+Done
