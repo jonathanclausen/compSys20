@@ -1,0 +1,12 @@
+test:
+    subq $8, %rsp
+    movq %r11, (%rsp)
+    movq $2, %rdi
+    call .L1, %r11
+    addq $1, %rdi
+    movq (%rsp), %r11
+    addq $8, %rsp
+    stop
+.L1:
+    addq $3, %rdi
+    ret %r11

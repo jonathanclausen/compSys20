@@ -1,0 +1,6 @@
+     1   : R-V      0 -> 646001000000               : R--                                                       : R-- 
+     2   : R-V      6 -> b706100a000000             : R-V  64  MOVQ $i,d                          1 -> reg[6]   : R-- 
+     3   : R-V      d -> 500014000000               : R-V  b7  LEAQ i(s,z,v),d                    b -> reg[0]   : R-V 
+     4   : R-V     13 -> 0000                       : R-V  50  ADD  $i,d                         1f -> reg[0]   : R-V 
+     5   : R-V     15 -> 0000                       : R-V  00  STOP                                             : R-V 
+Done

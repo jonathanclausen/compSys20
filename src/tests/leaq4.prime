@@ -1,0 +1,4 @@
+test:
+  movq $1, %rdi
+  leaq 10, %rax
+  addq $20, %rax

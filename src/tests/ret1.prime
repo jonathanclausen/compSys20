@@ -1,5 +1,5 @@
 test:
-  jmp L2
-L2:
+  movq $1, %rax
+  ret %rax
   addq $1, %rax
   stop
